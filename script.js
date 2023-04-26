@@ -46,27 +46,27 @@ const formValidation = (d, m, y) => {
   const errors = ["", "", ""];
   const errorNodes = document.querySelectorAll(".error");
   let valid = true;
-  if (birthday > today) {
+  if (!y) {
+    errors[2] = "This field is required";
+  } else if (birthday > today) {
     errors[2] = "Must be in the past";
     valid = false;
-  } else if (!y) {
-    errors[2] = "This field is required";
   } else {
     errors[2] = "";
   }
-  if (m > 12) {
+  if (!m) {
+    errors[1] = "This field is required";
+  } else if (m > 12) {
     errors[1] = "Must be a valid month";
     valid = false;
-  } else if (!m) {
-    errors[1] = "This field is required";
   } else {
     errors[1] = "";
   }
-  if (!dateIsValid(new Date(`${y}-${m}-${d}`))) {
+  if (!d) {
+    errors[0] = "This field is required";
+  } else if (!dateIsValid(new Date(`${y}-${m}-${d}`))) {
     errors[0] = "Must be a valid date";
     valid = false;
-  } else if (!d) {
-    errors[0] = "This field is required";
   } else {
     errors[0] = "";
   }
