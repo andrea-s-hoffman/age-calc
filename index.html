@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form class="dob">
+        <div class="inputs">
+          <div class="label-input">
+            <label for="day">Day</label>
+            <input type="number" name="day" id="day" placeholder="DD" />
+            <span class="error err-day"></span>
+          </div>
+          <div class="label-input">
+            <label for="month">Month</label>
+            <input type="number" name="month" id="month" placeholder="MM" />
+            <span class="error err-mo"></span>
+          </div>
+          <div class="label-input">
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" placeholder="YYYY" />
+            <span class="error err-yr"></span>
+          </div>
+        </div>
+        <button>
+          <img src="/assets/images/icon-arrow.svg" alt="down arrow" />
+        </button>
+      </form>
+      <div class="results">
+        <p class="years"><span class="num">--</span> years</p>
+        <p class="months"><span class="num">--</span> months</p>
+        <p class="days"><span class="num">--</span> days</p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
